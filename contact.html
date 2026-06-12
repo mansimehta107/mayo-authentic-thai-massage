@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Mayo Authentic Thai Massage</title>
+  <meta name="description" content="Book your Thai massage in Newport, Co. Mayo. Send an availability enquiry, call +353 89 223 5714 or visit our studio in Knockbreaga, between Newport and Mulranny." />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Federo&family=Libre+Caslon+Text:ital@0;1&family=Funnel+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="loader">
+    <div class="loader-mark">Mayo Authentic Thai <em>Massage</em></div>
+  </div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/logo.jpg" alt="Mayo Authentic Thai Massage logo" />
+        <span>Mayo Authentic<br />Thai Massage</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="treatments.html">Treatments</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn nav-cta">Book Now <span class="arr">→</span></a>
+      <button class="menu-toggle" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-menu-meta">
+      Knockbreaga, Newport, Co. Mayo<br />
+      <a href="tel:+353892235714">+353 89 223 5714</a>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow" data-reveal>Contact</span>
+        <h1 class="display-xl" data-reveal style="--d:.1s">We'd Love to Hear From <span class="accent-serif">You</span></h1>
+        <p class="lead" data-reveal style="--d:.2s">Check availability, ask a question or simply tell us what's hurting — we'll take care of the rest.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:clamp(2rem,4vw,3rem)">
+      <div class="container contact-grid">
+
+        <!-- Info -->
+        <div>
+          <span class="eyebrow" data-reveal>Get in Touch</span>
+          <h2 class="display-lg" data-reveal style="--d:.05s">Visit, Call or <span class="accent-serif">Write</span></h2>
+          <div class="info-cards" data-stagger>
+            <div class="info-card">
+              <div class="ico">⌖</div>
+              <div>
+                <h3>Studio</h3>
+                <p>Knockbreaga, Newport, Co. Mayo, Ireland<br /><span style="color:var(--ink-50);font-size:0.9rem">On the road between Newport and Mulranny · free parking</span></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="ico">✆</div>
+              <div>
+                <h3>Phone</h3>
+                <p><a href="tel:+353892235714">+353 89 223 5714</a><br /><span style="color:var(--ink-50);font-size:0.9rem">Call or text — we reply fast</span></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="ico">✉</div>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:chiraphat1979@gmail.com">chiraphat1979@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="ico">◷</div>
+              <div>
+                <h3>Opening Hours</h3>
+                <p>Monday – Saturday: 9:00 – 19:00<br />Sunday: by appointment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-card" data-reveal style="--d:.15s">
+          <h2 class="display-md">Send an Availability Enquiry</h2>
+          <p style="color:var(--ink-70);margin:0.6rem 0 1.6rem;font-size:0.97rem">Tell us when you'd like to come and which therapy you're interested in — we'll confirm within a few hours.</p>
+          <form id="enquiry-form" action="https://formsubmit.co/chiraphat1979@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New website enquiry — Mayo Authentic Thai Massage" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="f-name">Name</label>
+                <input id="f-name" type="text" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form-field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" type="tel" name="phone" placeholder="Your phone number" />
+              </div>
+              <div class="form-field full">
+                <label for="f-email">Email</label>
+                <input id="f-email" type="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-field">
+                <label for="f-treatment">Treatment</label>
+                <select id="f-treatment" name="treatment" required>
+                  <option value="" disabled selected>Choose a therapy…</option>
+                  <option>Traditional Thai Massage</option>
+                  <option>Thai Oil Massage</option>
+                  <option>Full Body Massage</option>
+                  <option>Relaxing Massage</option>
+                  <option>Deep Tissue Massage</option>
+                  <option>Back, Spine & Joint Relief</option>
+                  <option>Head, Neck & Shoulder</option>
+                  <option>Foot Massage & Reflexology</option>
+                  <option>Sports Massage</option>
+                  <option>Aromatherapy Massage</option>
+                  <option>Hot Stone Massage</option>
+                  <option>Pregnancy Massage</option>
+                  <option>Women's Wellness Therapy</option>
+                  <option>Ayurvedic Massage</option>
+                  <option>Not sure — recommend for me</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="f-date">Preferred Date & Time</label>
+                <input id="f-date" type="text" name="preferred_time" placeholder="e.g. Saturday afternoon" />
+              </div>
+              <div class="form-field full">
+                <label for="f-msg">Message</label>
+                <textarea id="f-msg" name="message" placeholder="Anything we should know — pain points, pregnancy, preferences…"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn" style="margin-top:1.4rem;width:100%;justify-content:center">Send Enquiry <span class="arr">→</span></button>
+            <p id="form-status" class="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="container">
+        <div class="map-embed" data-reveal>
+          <iframe src="https://www.google.com/maps?q=Knockbreaga,+Newport,+Co.+Mayo,+Ireland&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing Mayo Authentic Thai Massage studio location"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.jpg" alt="Mayo Authentic Thai Massage logo" />
+          <p>Authentic Thai massage in Newport, Co. Mayo — Wat Po–certified expertise, trusted by the people of Mayo since 2022.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Therapies</h4>
+          <ul>
+            <li><a href="treatments.html">Thai Massage</a></li>
+            <li><a href="treatments.html">Deep Tissue</a></li>
+            <li><a href="treatments.html">Oil Massage</a></li>
+            <li><a href="treatments.html">Pregnancy Massage</a></li>
+            <li><a href="treatments.html">Foot Massage</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Visit Us</h4>
+          <ul>
+            <li>Knockbreaga, Newport,<br />Co. Mayo, Ireland</li>
+            <li><a href="tel:+353892235714">+353 89 223 5714</a></li>
+            <li><a href="mailto:chiraphat1979@gmail.com">chiraphat1979@gmail.com</a></li>
+            <li>Mon–Sat: 9:00 – 19:00<br />Sunday: by appointment</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">Mayo Thai Massage</div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Mayo Authentic Thai Massage. All rights reserved.</span>
+        <span><a href="https://www.facebook.com/p/Mayo-Authentic-Thai-Massage-100075777374962/" target="_blank" rel="noopener">Facebook</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
