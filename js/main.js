@@ -92,7 +92,7 @@
   });
 
   /* ---------- Marquee: duplicate track content for seamless loop ---------- */
-  document.querySelectorAll(".marquee-track").forEach(function (track) {
+  document.querySelectorAll(".marquee-track, .gallery-track").forEach(function (track) {
     track.innerHTML += track.innerHTML;
   });
 
