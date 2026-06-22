@@ -378,7 +378,7 @@ body.menu-open { overflow: hidden; }
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: clamp(9rem, 18vh, 12.5rem);
+  padding-top: clamp(7.5rem, 13vh, 10rem);
   text-align: center;
   overflow: hidden;
 }
@@ -386,12 +386,12 @@ body.menu-open { overflow: hidden; }
 .hero .container { flex: 0 0 auto; }
 
 .hero-title {
-  max-width: 15ch;
+  max-width: 20ch;
   margin-inline: auto;
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1.04;
+  font-size: clamp(2.1rem, 4.4vw, 3.85rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
 }
 
@@ -411,14 +411,14 @@ body.menu-open { overflow: hidden; }
 
 /* Full-bleed oval image gallery — the hero's signature element */
 .hero-gallery {
-  margin-top: clamp(2.2rem, 5vh, 4rem);
+  margin-top: clamp(1.5rem, 4vh, 3rem);
   flex: 1 1 auto;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  min-height: clamp(320px, 42vh, 470px);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  min-height: clamp(330px, 46vh, 520px);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 }
 
 .gallery-track {
@@ -431,10 +431,10 @@ body.menu-open { overflow: hidden; }
 
 .gallery-item {
   flex: none;
-  width: clamp(195px, 18vw, 268px);
-  height: clamp(310px, 40vh, 440px);
+  width: clamp(205px, 16.5vw, 262px);
+  height: clamp(330px, 44vh, 500px);
   margin-right: clamp(14px, 1.6vw, 26px);
-  border-radius: 50%;
+  border-radius: 50% 50% 0 0;
   overflow: hidden;
   box-shadow: 0 30px 60px -34px rgba(11, 49, 44, 0.4);
 }
