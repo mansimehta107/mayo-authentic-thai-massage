@@ -151,6 +151,29 @@
     document.querySelectorAll("[data-reveal], [data-split]").forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Therapies pinned-scroll parallax ---------- */
+  var therapies = document.querySelector(".therapies");
+  if (therapies && !reduceMotion && window.matchMedia("(min-width: 861px)").matches) {
+    var pCols = therapies.querySelectorAll("[data-parallax]");
+    var pTicking = false;
+    function therapyParallax() {
+      var rect = therapies.getBoundingClientRect();
+      var prog = (vh() - rect.top) / (vh() + rect.height);
+      prog = Math.max(0, Math.min(1, prog));
+      var base = (prog - 0.5) * 2; // -1 .. 1
+      pCols.forEach(function (col) {
+        var dir = col.getAttribute("data-parallax") === "right" ? 1 : -1;
+        col.style.transform = "translateY(" + (base * 48 * dir).toFixed(1) + "px)";
+      });
+    }
+    function onScrollParallax() {
+      if (!pTicking) { pTicking = true; requestAnimationFrame(function () { therapyParallax(); pTicking = false; }); }
+    }
+    window.addEventListener("scroll", onScrollParallax, { passive: true });
+    window.addEventListener("resize", onScrollParallax, { passive: true });
+    therapyParallax();
+  }
+
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll(".faq-item").forEach(function (item) {
     var q = item.querySelector(".faq-q");

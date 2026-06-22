@@ -590,6 +590,56 @@ body.menu-open { overflow: hidden; }
 .t-card.round .t-card-meta { justify-content: center; }
 .t-card.round .t-card-link { justify-content: center; }
 
+/* ---------- Therapies — pinned-scroll showcase ---------- */
+.therapies { padding-block: clamp(3rem, 6vw, 6rem); }
+
+.therapies-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 380px) 1fr;
+  gap: clamp(1.4rem, 3vw, 3rem);
+  align-items: start;
+}
+
+.t-col { display: flex; flex-direction: column; gap: clamp(1.4rem, 3vw, 2.6rem); will-change: transform; }
+.t-col-right { margin-top: clamp(5rem, 16vh, 13rem); }
+
+.t-center {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-center-inner { max-width: 360px; text-align: center; }
+.t-star { font-size: 1.7rem; color: var(--teal); margin-bottom: 0.9rem; line-height: 1; }
+.t-center-inner p { margin: 1.1rem 0 1.9rem; color: var(--ink-70); }
+
+.t-photo {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 32px 64px -38px rgba(11, 49, 44, 0.5);
+}
+
+.t-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.5s var(--ease-out); }
+.t-photo:hover img { transform: scale(1.05); }
+
+.t-photo figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.6rem 1.4rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: linear-gradient(to top, rgba(8, 38, 34, 0.92), rgba(8, 38, 34, 0));
+}
+
 /* ---------- Treatments list page ---------- */
 .t-row {
   display: grid;
@@ -980,6 +1030,11 @@ body.menu-open { overflow: hidden; }
   .nav-brand { justify-self: start; }
   .menu-toggle { display: block; }
   .split, .feature-grid, .contact-grid, .owner-card { grid-template-columns: 1fr; }
+  .therapies-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  .t-center { position: static; height: auto; order: -1; padding-bottom: 1rem; }
+  .t-col { transform: none !important; }
+  .t-col-right { margin-top: 0; }
+  .t-photo { aspect-ratio: 16 / 11; }
   .t-row { grid-template-columns: 1fr; }
   .t-row-media { height: 200px; }
   .t-row-price { text-align: left; }
