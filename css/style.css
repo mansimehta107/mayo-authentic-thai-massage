@@ -638,7 +638,62 @@ body.menu-open { overflow: hidden; }
   letter-spacing: 0.01em;
   color: #fff;
   background: linear-gradient(to top, rgba(8, 38, 34, 0.92), rgba(8, 38, 34, 0));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
+
+/* Showcase photo as a clickable link */
+.t-photo { display: block; cursor: pointer; transition: transform 0.6s var(--ease-out), box-shadow 0.6s var(--ease-out); }
+.t-photo:hover { transform: translateY(-6px); box-shadow: 0 42px 72px -34px rgba(11, 49, 44, 0.55); }
+.t-photo figcaption::after { content: "→"; opacity: 0; transform: translateX(-6px); transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out); }
+.t-photo:hover figcaption::after { opacity: 1; transform: none; }
+
+/* ---------- Massage detail page ---------- */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  transition: color 0.3s ease;
+}
+.back-link:hover { color: var(--ink); }
+
+.detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 2.5vw, 2rem); }
+
+.detail-card {
+  background: var(--cream);
+  border: 1px solid var(--ink-10);
+  border-radius: var(--r-card);
+  padding: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.detail-ico {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+.detail-card h3 { font-size: 1.35rem; }
+.detail-list { margin-top: 1.1rem; display: grid; gap: 0.75rem; }
+.detail-list li { display: flex; gap: 0.65em; align-items: baseline; color: var(--ink-70); font-size: 0.98rem; }
+.detail-list li::before { content: "✦"; color: var(--teal); font-size: 0.7em; flex: none; }
+
+/* Treatments list rows as links */
+.t-row { color: inherit; transition: background 0.4s var(--ease-out); }
+.t-row h3 { transition: color 0.3s ease; }
+.t-row:hover { background: var(--ink-05); }
+.t-row:hover h3 { color: var(--teal); }
 
 /* ---------- Treatments list page ---------- */
 .t-row {
@@ -1035,6 +1090,7 @@ body.menu-open { overflow: hidden; }
   .t-col { transform: none !important; }
   .t-col-right { margin-top: 0; }
   .t-photo { aspect-ratio: 16 / 11; }
+  .detail-grid { grid-template-columns: 1fr; }
   .t-row { grid-template-columns: 1fr; }
   .t-row-media { height: 200px; }
   .t-row-price { text-align: left; }
