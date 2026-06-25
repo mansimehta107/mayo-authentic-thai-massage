@@ -448,7 +448,7 @@ body.menu-open { overflow: hidden; }
 /* ---------- Marquee ---------- */
 .marquee {
   overflow: hidden;
-  padding-block: clamp(1.6rem, 3vw, 2.4rem);
+  padding-block: clamp(0.35rem, 0.65vw, 0.5rem);
   border-top: 1px solid var(--ink-10);
   border-bottom: 1px solid var(--ink-10);
 }
@@ -463,14 +463,14 @@ body.menu-open { overflow: hidden; }
 
 .marquee-track span {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.6vw, 2.1rem);
-  letter-spacing: 0.04em;
+  font-size: clamp(0.8rem, 1.3vw, 1.05rem);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   white-space: nowrap;
-  padding-inline: 1.4rem;
+  padding-inline: 1rem;
   display: inline-flex;
   align-items: center;
-  gap: 2.8rem;
+  gap: 1.8rem;
   color: var(--ink-70);
 }
 
@@ -520,19 +520,19 @@ body.menu-open { overflow: hidden; }
   border-block: 1px solid var(--ink-10);
 }
 
-.stat { background: var(--bg); padding: clamp(1.8rem, 3.5vw, 3rem) 1.5rem; text-align: center; }
+.stat { background: var(--bg); padding: clamp(1.3rem, 2.4vw, 2rem) 1.5rem; text-align: center; }
 
 .stat b {
   display: block;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-size: clamp(3.2rem, 5.6vw, 4.8rem);
   line-height: 1;
 }
 
-.stat b sup { font-size: 0.45em; color: var(--teal); }
+.stat b sup { font-size: 0.58em; vertical-align: baseline; color: var(--teal); }
 
-.stat span { display: block; margin-top: 0.6rem; font-size: 0.92rem; color: var(--ink-50); letter-spacing: 0.06em; text-transform: uppercase; }
+.stat > span { display: block; margin-top: 0.5rem; font-size: 0.9rem; color: var(--ink-50); letter-spacing: 0.06em; text-transform: uppercase; }
 
 /* ---------- Treatment cards ---------- */
 .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 2.5vw, 2rem); }
