@@ -224,21 +224,19 @@ section { padding-block: clamp(5rem, 10vw, 9.5rem); }
 .nav-inner {
   width: min(1240px, 100% - 48px);
   margin-inline: auto;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 1.5rem;
   padding: 1.5rem 0;
   transition: padding 0.5s var(--ease-out);
 }
 
 .nav.scrolled .nav-inner { padding: 0.85rem 0; }
 
-.nav-side { display: flex; align-items: center; gap: 2.3rem; }
-.nav-left { justify-content: flex-end; }
-.nav-right { justify-content: flex-start; }
+.nav-links { display: flex; align-items: center; gap: clamp(1.3rem, 2.1vw, 2.2rem); }
 
-.nav-side a {
+.nav-links a {
   position: relative;
   font-size: 0.82rem;
   font-weight: 500;
@@ -248,7 +246,7 @@ section { padding-block: clamp(5rem, 10vw, 9.5rem); }
   transition: color 0.3s ease;
 }
 
-.nav-side a::after {
+.nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -261,10 +259,10 @@ section { padding-block: clamp(5rem, 10vw, 9.5rem); }
   transition: transform 0.45s var(--ease-out);
 }
 
-.nav-side a:hover, .nav-side a.active { color: var(--ink); }
-.nav-side a:hover::after, .nav-side a.active::after { transform: scaleX(1); transform-origin: left; }
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); transform-origin: left; }
 
-.nav-brand { display: flex; align-items: center; gap: 0.65rem; justify-self: center; }
+.nav-brand { display: flex; align-items: center; gap: 0.65rem; flex: none; }
 .nav-brand img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
 .nav-brand span {
   font-family: var(--font-display);
@@ -282,7 +280,6 @@ section { padding-block: clamp(5rem, 10vw, 9.5rem); }
   background: var(--ink);
   position: relative;
   flex: none;
-  justify-self: end;
 }
 
 .menu-toggle span {
@@ -689,6 +686,10 @@ body.menu-open { overflow: hidden; }
 .detail-list li { display: flex; gap: 0.65em; align-items: baseline; color: var(--ink-70); font-size: 0.98rem; }
 .detail-list li::before { content: "✦"; color: var(--teal); font-size: 0.7em; flex: none; }
 
+/* Venue gallery */
+.venue-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.6rem); }
+.venue-gallery img { width: 100%; height: clamp(260px, 30vw, 380px); object-fit: cover; border-radius: var(--r-card); }
+
 /* Treatments list rows as links */
 .t-row { color: inherit; transition: background 0.4s var(--ease-out); }
 .t-row h3 { transition: color 0.3s ease; }
@@ -1080,9 +1081,7 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (max-width: 860px) {
-  .nav-inner { display: flex; justify-content: space-between; }
-  .nav-side { display: none; }
-  .nav-brand { justify-self: start; }
+  .nav-links { display: none; }
   .menu-toggle { display: block; }
   .split, .feature-grid, .contact-grid, .owner-card { grid-template-columns: 1fr; }
   .therapies-grid { grid-template-columns: 1fr; gap: 1.4rem; }
@@ -1091,6 +1090,7 @@ body.menu-open { overflow: hidden; }
   .t-col-right { margin-top: 0; }
   .t-photo { aspect-ratio: 16 / 11; }
   .detail-grid { grid-template-columns: 1fr; }
+  .venue-gallery { grid-template-columns: 1fr; }
   .t-row { grid-template-columns: 1fr; }
   .t-row-media { height: 200px; }
   .t-row-price { text-align: left; }
