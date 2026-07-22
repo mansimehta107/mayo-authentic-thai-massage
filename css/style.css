@@ -1108,4 +1108,9 @@ body.menu-open { overflow: hidden; }
   .nav-brand span { font-size: 0.85rem; }
   .hero-chip-2 { display: none; }
   .footer-top { grid-template-columns: 1fr; }
+
+  /* Hero gallery on phones: smaller arches that fit above the fold, faster scroll */
+  .hero-gallery { min-height: 210px; margin-top: 1rem; }
+  .gallery-item { width: 138px; height: 205px; margin-right: 10px; }
+  .gallery-track { animation-duration: 20s; }
 }
