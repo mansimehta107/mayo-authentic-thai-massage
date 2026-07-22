@@ -1088,11 +1088,25 @@ body.menu-open { overflow: hidden; }
   .nav-links { display: none; }
   .menu-toggle { display: block; }
   .split, .feature-grid, .contact-grid, .owner-card { grid-template-columns: 1fr; }
-  .therapies-grid { grid-template-columns: 1fr; gap: 1.4rem; }
-  .t-center { position: static; height: auto; order: -1; padding-bottom: 1rem; }
-  .t-col { transform: none !important; }
+  /* Mobile: sticky "stacking postcard" effect for the massage cards */
+  .therapies-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+  .t-center { position: static; height: auto; order: -1; padding-bottom: 0.5rem; }
+  .t-col { transform: none !important; display: contents; }
   .t-col-right { margin-top: 0; }
-  .t-photo { aspect-ratio: 16 / 11; }
+  .t-photo {
+    aspect-ratio: 16 / 11;
+    position: sticky;
+    margin: 0;
+    box-shadow: 0 16px 40px -16px rgba(11, 49, 44, 0.55);
+  }
+  .t-col-left .t-photo:nth-child(1) { top: 80px; }
+  .t-col-left .t-photo:nth-child(2) { top: 92px; }
+  .t-col-left .t-photo:nth-child(3) { top: 104px; }
+  .t-col-left .t-photo:nth-child(4) { top: 116px; }
+  .t-col-right .t-photo:nth-child(1) { top: 128px; }
+  .t-col-right .t-photo:nth-child(2) { top: 140px; }
+  .t-col-right .t-photo:nth-child(3) { top: 152px; }
+  .t-col-right .t-photo:nth-child(4) { top: 164px; }
   .detail-grid { grid-template-columns: 1fr; }
   .venue-gallery { grid-template-columns: 1fr; }
   .t-row { grid-template-columns: 1fr; }
