@@ -1,0 +1,13 @@
+# Personal / private documents — never publish these to the public site repo
+*.pdf
+assets/*.pdf
+Motivation Letter.pdf
+Purvish Motivation Letter.pdf
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+
+# Source image files kept locally (site serves optimised .webp instead)
+*.jfif
+*.jpeg
